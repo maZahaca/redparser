@@ -157,9 +157,9 @@ describe('RedParser', function () {
     });
 });
 
-describe('PaginateableParser', function () {
+describe('PaginatableParser', function () {
     this.timeout(30000);
-    var parser = new PaginateableParser();
+    var parser = new PaginatableParser();
 
     it('parse scrollable collection', function (done) {
         var result = parser.parseAsync(
