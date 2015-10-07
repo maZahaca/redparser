@@ -57,75 +57,75 @@ describe('RedParser', function () {
     });
 
     describe('#parse', function () {
-        //it('parse simple element', function () {
-        //    var result = parser.parse({scope: 'div.get-scope-test'});
-        //    expect(result).equal('simple');
-        //});
-        //
-        //it('parse simple element with multiple flag', function () {
-        //    var result = parser.parse({scope: 'div.get-scope-test-2', multiple: true});
-        //    expect(result).equal('column column');
-        //});
-        //
-        //it('parse simple element with multiple flag and separator ","', function () {
-        //    var result = parser.parse({scope: 'div.get-scope-test-2', multiple: true, separator: ','});
-        //    expect(result).equal('column,column');
-        //});
-        //
-        //it('parse collection element, with context', function () {
-        //    var result = parser.parse({
-        //        scope: 'div.get-scope-test-4-passed',
-        //        collection: [[
-        //            {name: 'row1', scope: 'div:first-child'},
-        //            {name: 'row2', scope: 'div:last-child'},
-        //        ]]
-        //    });
-        //    expect(result).to.be.instanceOf(Array);
-        //    expect(result).to.have.length(2);
-        //    result.forEach(function (item) {
-        //        expect(item).to.be.instanceOf(Object);
-        //        expect(item.row1).equal('row1');
-        //        expect(item.row2).equal('row2');
-        //    });
-        //});
-        //
-        //it('parse row element, with context', function () {
-        //    var result = parser.parse({
-        //        scope: 'div.get-scope-test-3',
-        //        collection: [
-        //            {name: 'column1', scope: 'div:first-child'},
-        //            {name: 'column2', scope: 'div:last-child'},
-        //        ]
-        //    });
-        //    expect(result).to.be.instanceOf(Object);
-        //    expect(result.column1).equal('column1');
-        //    expect(result.column2).equal('column2');
-        //});
-        //
-        //it('parse collection with sub collection, with context', function () {
-        //    var result = parser.parse({
-        //        scope: 'div.get-scope-test-5-passed',
-        //        collection: [[
-        //            {name: 'column1', scope: 'div.get-scope-test-5-passed-column1'},
-        //            {
-        //                name: 'sub-column',
-        //                scope: 'div:last-child',
-        //                extract: true,
-        //                collection: [
-        //                    {name: 'column2', scope: 'div.get-scope-test-5-passed-column2'},
-        //                    {name: 'column3', scope: 'div.get-scope-test-5-passed-column3'},
-        //                    {name: 'column4', scope: 'div.get-scope-test-5-passed-column4'}
-        //                ]
-        //            }
-        //        ]]
-        //    });
-        //    expect(result).to.be.instanceOf(Array);
-        //    expect(result).to.have.length(2);
-        //    result.forEach(function (item) {
-        //        expect(item).to.be.instanceOf(Object);
-        //        expect(item.column1).equal('column1');
-        //    });
-        //});
+        it('parse simple element', function () {
+            var result = parser.parse({scope: 'div.get-scope-test'});
+            expect(result).equal('simple');
+        });
+
+        it('parse simple element with multiple flag', function () {
+            var result = parser.parse({scope: 'div.get-scope-test-2', multiple: true});
+            expect(result).equal('column column');
+        });
+
+        it('parse simple element with multiple flag and separator ","', function () {
+            var result = parser.parse({scope: 'div.get-scope-test-2', multiple: true, separator: ','});
+            expect(result).equal('column,column');
+        });
+
+        it('parse collection element, with context', function () {
+            var result = parser.parse({
+                scope: 'div.get-scope-test-4-passed',
+                collection: [[
+                    {name: 'row1', scope: 'div:first-child'},
+                    {name: 'row2', scope: 'div:last-child'},
+                ]]
+            });
+            expect(result).to.be.instanceOf(Array);
+            expect(result).to.have.length(2);
+            result.forEach(function (item) {
+                expect(item).to.be.instanceOf(Object);
+                expect(item.row1).equal('row1');
+                expect(item.row2).equal('row2');
+            });
+        });
+
+        it('parse row element, with context', function () {
+            var result = parser.parse({
+                scope: 'div.get-scope-test-3',
+                collection: [
+                    {name: 'column1', scope: 'div:first-child'},
+                    {name: 'column2', scope: 'div:last-child'},
+                ]
+            });
+            expect(result).to.be.instanceOf(Object);
+            expect(result.column1).equal('column1');
+            expect(result.column2).equal('column2');
+        });
+
+        it('parse collection with sub collection, with context', function () {
+            var result = parser.parse({
+                scope: 'div.get-scope-test-5-passed',
+                collection: [[
+                    {name: 'column1', scope: 'div.get-scope-test-5-passed-column1'},
+                    {
+                        name: 'sub-column',
+                        scope: 'div:last-child',
+                        extract: true,
+                        collection: [
+                            {name: 'column2', scope: 'div.get-scope-test-5-passed-column2'},
+                            {name: 'column3', scope: 'div.get-scope-test-5-passed-column3'},
+                            {name: 'column4', scope: 'div.get-scope-test-5-passed-column4'}
+                        ]
+                    }
+                ]]
+            });
+            expect(result).to.be.instanceOf(Array);
+            expect(result).to.have.length(2);
+            result.forEach(function (item) {
+                expect(item).to.be.instanceOf(Object);
+                expect(item.column1).equal('column1');
+            });
+        });
 
         it('parse collection with sub collection, with context', function () {
             var result = parser.parse({

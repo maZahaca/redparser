@@ -28,7 +28,7 @@
   },
   "main": "./index",
   "scripts": {
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha-phantomjs -p phantomjs tests/redparser.html"
   },
   "engines": {
     "node": ">= 0.4.0"
