@@ -1,0 +1,55 @@
+{
+  "author": {
+    "name": "Andrew Reddikh",
+    "email": "andrew@reddikh.com"
+  },
+  "name": "parser",
+  "description": "Lib allows to parse information from webpage",
+  "keywords": [
+    "parser",
+    "crawler",
+    "site"
+  ],
+  "homepage": "http://redcode.im",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Andrew Reddikh",
+      "email": "andrew@reddikh.com"
+    }
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maZahaca/redparser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maZahaca/redparser/issues"
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "mocha-browser": "*",
+    "mocha-phantomjs": "^4.0.1"
+  },
+  "_id": "parser@0.1.0",
+  "_shasum": "a91c06acc01057f4f4b67ed7785bd7ff4466b2fb",
+  "_from": "parser@0.1.0",
+  "_npmVersion": "2.12.1",
+  "_nodeVersion": "2.2.1",
+  "_npmUser": {
+    "name": "redcode",
+    "email": "dev@redcode.im"
+  },
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
