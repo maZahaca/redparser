@@ -1,0 +1,48 @@
+{
+  "author": {
+    "name": "Andrew Reddikh",
+    "email": "andrew@reddikh.com"
+  },
+  "name": "redparser",
+  "description": "Lib allows to parse information from webpage",
+  "keywords": [
+    "parser",
+    "crawler",
+    "site"
+  ],
+  "homepage": "http://redcode.im",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Andrew Reddikh",
+      "email": "andrew@reddikh.com"
+    }
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maZahaca/redparser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maZahaca/redparser/issues"
+  },
+  "main": "./lib/parser",
+  "scripts": {
+    "test": "mocha-phantomjs -p `which phantomjs` tests/redparser.html",
+    "lodash": "./install-lodash.sh --update",
+    "postinstall": "npm run lodash"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "dependencies": {
+    "lodash-cli": "^3.10.1"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "mocha-browser": "^0.2.0",
+    "mocha-phantomjs": "^4.0.1"
+  },
+  "directories": {}
+}
