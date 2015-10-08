@@ -1,5 +1,7 @@
 # RedParser
 
+[![Build Status](https://img.shields.io/travis/maZahaca/redparser.svg?style=flat)](https://travis-ci.org/maZahaca/redparser)
+
 ## Tests
 
 However mocha-phantomjs dependencies are mapped to the version 1.9.*
