@@ -7,5 +7,5 @@ include_modules=create,defaultsDeep,isEqual
 lodash_dir=lib
 lodash_path=${lodash_dir}/lodash.js
 
-./node_modules/.bin/lodash include=${include_modules} exports=amd,commonjs,global -d -o ${lodash_path} && \
+./node_modules/.bin/lodash include=${include_modules} exports=amd,node,global -d -o ${lodash_path} && \
 echo "lodash installed successfully";
